@@ -1,3 +1,4 @@
+alert('Page comming soon!');
 // Chữ của menu.
 let menuText = document.querySelectorAll('.menu-text');
 // Các nút của menu
