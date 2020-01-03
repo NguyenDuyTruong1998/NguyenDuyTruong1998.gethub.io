@@ -3,17 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <meta name="author" content="Nguyễn Duy Trường" email='truongezgg@gmail.com'>
     <link rel="stylesheet" href="CSS/reset.css"><!-- Reset CSS -->
     <link rel="stylesheet" href="CSS/setting.css"><!-- Setting -->
     <link rel="stylesheet" href="CSS/main.css"><!-- Style -->
+    <link rel="stylesheet" href="CSS/girdview.css"><!-- Style -->
+    <link rel="stylesheet" href="CSS/icon.css"><!-- Icon -->
     <title>Truongezgg comming soon</title>
 </head>
 <body>
-    <h1>Comming soon...</h1>
-    <script>
-        alert('Page comming soon!');
-    </script>
+    <section class="wrapper row">
+        <div class="col-s-12" id="js-header">
+            <div class="bg-image"></div>
+            <div class="content">
+                <aside class="header__menu">
+                    <ul class="menu">
+                        <li id="js-toggle-menu" class="menu-item">
+                            <i class="icon-menu"></i>
+                            <!-- <span class="menu-text"><i class="icon-cross"></i></span> -->
+                        </li>
+                        <li id="js-btn-about-me" class="menu-item">
+                            <i class="icon-home3"></i>
+                            <span class="menu-text">Home</span>
+                        </li>
+                        <li id="js-btn-my-work" class="menu-item">
+                            <i class="icon-briefcase"></i>
+                            <span class="menu-text">My work</span>
+                        </li>
+                        <li id="js-btn-resume" class="menu-item">
+                            <i class="icon-profile"></i>
+                            <span class="menu-text">Resume</span>
+                        </li>
+                        <li id="js-btn-contact" class="menu-item">
+                            <i class="icon-phone"></i>
+                            <span class="menu-text">Contact</span>
+
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+        <div class="col-s-12" id="js-aboutme">
+            <div class="content">
+                <p class="heading">About Me</p>
+            </div>
+            
+        </div>
+        <div class="col-s-12" id="js-mywork">
+            <div class="content">
+                <p class="heading">My Work</p>
+            </div>
+        </div>
+        <div class="col-s-12" id="js-resume">
+            <div class="content">
+                <p class="heading">Resume</p>
+            </div>
+        </div>
+        <div class="col-s-12" id="js-swing">
+            <div class="content">
+                <p class="heading">Swing By</p>
+            </div>
+        </div>
+        <div class="col-s-12" id="js-contact">
+            <div class="content">
+                <p class="heading">Contact</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <!-- <a href="http://fb.com/truongezgg" class="footer__link" target="_blank" title="Trang facebook cá nhân">http://fb.com/truongezgg</a> -->
+        <p>Coppyright by Nguyễn Duy Trường</p>
+    </footer>
+    <script src="JS/main.js"></script>
 </body>
 </html>

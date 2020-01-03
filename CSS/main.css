@@ -1,0 +1,130 @@
+html,body {
+    height: 100%;
+}
+
+body {
+    background-color: rgba(3, 33, 42, 1);
+}
+
+.wrapper {
+    height: 100%;
+    font-size: 1.4rem;
+    position: relative;
+
+}
+
+.heading {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.menu-item {
+    display: block;
+    margin: 2.5rem 0;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+#js-header,
+#js-aboutme,
+#js-mywork,
+#js-resume,
+#js-swing,
+#js-contact {
+    height: 100%;
+    color: white;
+    background-color: #607d8b;
+    padding: 4rem 0;
+    position: absolute;
+    padding-left: 6.5rem;
+}
+
+/* Header (item1) */
+#js-header {
+    z-index: 99;
+    color: teal;
+    padding-left: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    max-width: 6.5rem;
+    user-select: none;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+
+}
+.bg-image {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    width: 25rem;
+    height: 100%;
+    background-image: url('../images/avt.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+
+.header__menu {
+    transition: all 0.5 ease;
+    position: absolute;
+    top: 0;
+}
+.menu-text {
+    padding: 0 3rem;
+    text-align: center;
+    display: none;
+}
+
+
+#js-header i {
+    font-size: 3.5rem;
+}
+#js-header i:hover {
+    color: turquoise;
+    transition: 0.3s;
+}
+
+/* End item 1 */
+
+#js-mywork {
+    color: #333;
+    /* background-color: #fff; */
+}
+
+#js-aboutme {
+    z-index: 2;
+    /* background-color: #607d8b; */
+}
+
+#js-resume {
+    /* background-color: #3f51db; */
+}
+
+#js-swing {
+    /* background-color: #616161; */
+}
+
+#js-contact {
+    /* background-color: #009688; */
+}
+
+.footer {
+    background-color: white;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 2rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.footer__link {
+    color: white;
+}
+.active {
+    color: tomato;
+}
