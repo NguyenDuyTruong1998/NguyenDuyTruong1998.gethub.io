@@ -2,6 +2,7 @@
 let menuText = document.querySelectorAll('.menu-text'),
     toggleMenu = document.getElementById('js-toggle-menu'),
     menu = document.getElementById('js-header'),
+    menuFoot = document.getElementById('js-menu-foot'),
     showMenu = false;
 
 let jsControl = [
@@ -37,6 +38,7 @@ try {
             menuText.forEach((el) => {
                 el.style.display = 'none';
             });
+            menuFoot.style.opacity = '0';
         } else {
             // Show
             showMenu = true;
@@ -47,6 +49,7 @@ try {
                     el.style.display = 'initial';
                 });
             }, 180);
+            menuFoot.style.opacity = '1';
         }
     } // end onclick
 } catch(e){}
@@ -87,4 +90,6 @@ function offMenu() {
     jsControl.forEach((el) => {
         el.btn.classList.remove('active');
     });
+    // hidden foot menu
+    menuFoot.style.opacity = '0';
 }
