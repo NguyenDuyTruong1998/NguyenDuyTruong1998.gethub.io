@@ -81,8 +81,9 @@ body {
     transition: all 0.5 ease;
     position: absolute;
     top: 0;
-    text-shadow: 0 0 2.5px #FFF, 0 0 4px #FFF, 0 0 4px #FFF;
+    text-shadow: 0 0 2.5px #FFF, 0 0 3px #FFF, 0 0 3px #FFF;
 }
+
 .menu-text {
     padding: 0 2rem;
     text-align: center;
@@ -96,7 +97,7 @@ body {
     bottom: 2.5rem;
     display: flex;
     justify-content: space-around;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     transition: all 0.5s;
     opacity: 0;
 }
@@ -106,7 +107,7 @@ body {
 }
 .menu-link:hover {
     color: teal;
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 3px #000;
 }
 
 
@@ -169,3 +170,22 @@ body {
     from {right: -1500px; opacity: 0.2;}
     to {right: 0; opacity: 1;}
 }
+
+/* xoay btn
+ @keyframes animateBtnMenu {
+    0% {
+        transform: rotateZ(0);
+      }
+      100% {
+        transform: rotateZ(90deg);
+      }
+}
+
+@-webkit-keyframes animateBtnMenu {
+    0% {
+        transform: rotateZ(0);
+      }
+      100% {
+        transform: rotateZ(90deg);
+      }
+} */
