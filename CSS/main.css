@@ -84,6 +84,16 @@ body {
     text-shadow: 0 0 2.5px #FFF, 0 0 3px #FFF, 0 0 3px #FFF;
 }
 
+#js-toggle-menu {
+    transition: 0.25s;
+    display: table;
+}
+
+#btn-menu:checked + #js-toggle-menu {
+    transform: rotateZ(180deg);
+    animation: animateBtnMenu 0.25s;
+}
+
 .menu-text {
     padding: 0 2rem;
     text-align: center;
@@ -160,6 +170,12 @@ body {
     text-shadow: 0 0 5px #333, 0 0 8px #333, 0 0 8px #333;
 }
 
+/* Chinh lai co chu nut close cho phu hop */
+.icon-cross::before {
+    font-size: 3rem;
+    color: tomato;
+}
+
 /* Animate */
 @keyframes animateright {
     from {right: -1500px; opacity: 0.2;}
@@ -171,21 +187,19 @@ body {
     to {right: 0; opacity: 1;}
 }
 
-/* xoay btn
- @keyframes animateBtnMenu {
+@keyframes animateBtnMenu {
     0% {
         transform: rotateZ(0);
       }
       100% {
-        transform: rotateZ(90deg);
+        transform: rotateZ(180deg);
       }
 }
-
 @-webkit-keyframes animateBtnMenu {
     0% {
         transform: rotateZ(0);
       }
       100% {
-        transform: rotateZ(90deg);
+        transform: rotateZ(180deg);
       }
-} */
+}

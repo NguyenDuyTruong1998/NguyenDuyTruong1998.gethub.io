@@ -39,6 +39,11 @@ try {
                 el.style.display = 'none';
             });
             menuFoot.style.opacity = '0';
+            // chuyen dau x thanh dau menu
+            setTimeout(() => {
+                document.getElementById('icon-menu').className = 'icon-menu';
+            }, 110);
+            
         } else {
             // Show
             showMenu = true;
@@ -50,6 +55,10 @@ try {
                 });
             }, 180);
             menuFoot.style.opacity = '1';
+            // Chuyen thanh dau x
+            setTimeout(() => {
+                document.getElementById('icon-menu').className = 'icon-cross';
+            }, 200);
         }
     } // end onclick
 } catch(e){}
@@ -92,4 +101,8 @@ function offMenu() {
     });
     // hidden foot menu
     menuFoot.style.opacity = '0';
+    // Xoay btn menu khi close menu
+    document.getElementById('btn-menu').checked = true;
+    document.getElementById('icon-menu').className = 'icon-menu';
+
 }
