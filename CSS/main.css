@@ -91,6 +91,9 @@ body {
 #js-toggle-menu {
     transition: 0.25s;
     -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
     display: table;
 }
 
@@ -200,16 +203,11 @@ body {
 
 .xoay {
     transform: rotateZ(180deg);
-    animation-name: animateBtnMenu;
-    animation-duration: 0.25s;
-    /* safari */
     -webkit-transform: rotateZ(180deg);
-    -webkit-animation-name: animateBtnMenu;
-    -webkit-animation-duration: 0.25s;
-
+    -moz-transform: rotateZ(180deg);
     -ms-transform: rotateZ(180deg);
-    -ms-animation-name: animateBtnMenu;
-    -ms-animation-duration: 0.25s;
+    -o-transform: rotateZ(180deg);
+
 }
 
 /* Animate */
@@ -221,21 +219,4 @@ body {
 @-webkit-keyframes animateright {
     from {right: -1500px; opacity: 0.2;}
     to {right: 0; opacity: 1;}
-}
-
-@keyframes animateBtnMenu {
-    0% {
-        transform: rotateZ(0);
-    }
-    100% {
-        transform: rotateZ(180deg);
-    }
-}
-@-webkit-keyframes animateBtnMenu {
-    0% {
-        transform: rotateZ(0);
-    }
-    100% {
-        transform: rotateZ(180deg);
-    }
 }
