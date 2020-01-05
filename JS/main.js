@@ -41,7 +41,7 @@ try {
             menuFoot.style.opacity = '0';
             // chuyen dau x thanh dau menu
             setTimeout(() => {
-                //document.getElementById('icon-menu').className = 'icon-menu';
+                document.getElementById('icon-menu').className = 'icon-menu';
             }, 110);
             
         } else {
@@ -57,7 +57,7 @@ try {
             menuFoot.style.opacity = '1';
             // Chuyen thanh dau x
             setTimeout(() => {
-                //document.getElementById('icon-menu').className = 'icon-cross';
+                document.getElementById('icon-menu').className = 'icon-cross';
             }, 150);
         }
     } // end onclick
@@ -72,8 +72,8 @@ try {
             el.btn.classList.add('active');
             toggleMenu.animate([
                 // keyframes
-                { transform: 'rotateZ(180deg)' }, 
-                { transform: 'translateY(0px)' }
+                { transform: 'rotateZ(0deg)' }, 
+                { transform: 'rotateZ(180deg)' }
               ], { 
                 // timing options
                 duration: 250,
@@ -112,6 +112,6 @@ function offMenu() {
     menuFoot.style.opacity = '0';
     // Xoay btn menu khi close menu
     document.getElementById('btn-menu').checked = true;
-    //document.getElementById('icon-menu').className = 'icon-menu';
+    document.getElementById('icon-menu').className = 'icon-menu';
 
 }

@@ -216,11 +216,11 @@ body {
         transform: rotateZ(180deg);
       }
 }
-@-webkit-keyframes animateBtnMenu {
+/* @-webkit-keyframes animateBtnMenu {
     0% {
         transform: rotateZ(0);
       }
       100% {
         transform: rotateZ(180deg);
       }
-}
+} */
