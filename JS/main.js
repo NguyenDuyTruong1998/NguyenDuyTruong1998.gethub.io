@@ -110,11 +110,12 @@ function offMenu() {
     document.getElementById('icon-menu').className = 'icon-menu';
 }
 
+// Xoay Icon menu khi click.
 function spinBtnMenu() {
-    let stt = document.getElementById('js-toggle-menu').className;
+    let stt = toggleMenu.className;
     if (stt === 'menu-item') {
-        document.getElementById('js-toggle-menu').classList.add('xoay');
+        toggleMenu.classList.add('xoay');
     } else {
-        document.getElementById('js-toggle-menu').classList.remove('xoay');
+        toggleMenu.classList.remove('xoay');
     }
 }

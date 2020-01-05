@@ -1,10 +1,10 @@
 html,body {
     height: 100%;
-    min-height: 35arem;
+    min-height: 40rem;
 }
 
 body {
-    background-color: rgb(217, 248, 249);
+    background-color: #328d8a;
 }
 
 .wrapper {
@@ -20,7 +20,7 @@ body {
 }
 
 .content {
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 .menu-item {
@@ -46,9 +46,9 @@ body {
     padding-bottom: 3.5rem;
     box-shadow: 0 4px 8px 0 rgba(89, 144, 137, 0.4),0 3px 6px 0 rgba(33, 96, 98, 0.19);
     -webkit-animation-name: animateright;
-    -webkit-animation-duration: 0.3s;
+    -webkit-animation-duration: 0.25s;
     animation-name: animateright;
-    animation-duration: 0.3s;
+    animation-duration: 0.25s;
 	
 }
 
@@ -89,11 +89,11 @@ body {
 }
 
 #js-toggle-menu {
-    transition: .2s;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    -moz-transition: .2s;
-    -ms-transition: .2s;
+    transition: .25s;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
     display: table;
 }
 
@@ -147,7 +147,9 @@ body {
     width: 15rem;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
+
 
 #js-resume {
     /* background-color: #3f51db; */
@@ -170,6 +172,7 @@ body {
     bottom: 0;
     z-index: 99;
     width: 100%;
+    text-align: center;
 }
 
 .footer__link {
@@ -197,11 +200,11 @@ body {
 
 /* Animate */
 @keyframes animateright {
-    from {right: -1500px; opacity: 0.2;}
-    to {right: 0; opacity: 1;}
+    from {top: -1500px; opacity: 0.2;}
+    to {top: 0; opacity: 1;}
 }
 
 @-webkit-keyframes animateright {
-    from {right: -1500px; opacity: 0.2;}
-    to {right: 0; opacity: 1;}
+    from {top: -1500px; opacity: 0.2;}
+    to {top: 0; opacity: 1;}
 }
