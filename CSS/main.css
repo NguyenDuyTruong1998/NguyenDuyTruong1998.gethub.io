@@ -97,7 +97,6 @@ body {
     transform: rotateZ(180deg);
 
     animation: animateBtnMenu 0.25s;
-    -webkit-animation: animateBtnMenu 0.25s;
 }
 }
 
