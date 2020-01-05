@@ -90,6 +90,7 @@ body {
 
 #js-toggle-menu {
     transition: 0.25s;
+    -webkit-transition: 0.25s;
     display: table;
 }
 
@@ -211,16 +212,16 @@ body {
 @keyframes animateBtnMenu {
     0% {
         transform: rotateZ(0);
-      }
-      100% {
+    }
+    100% {
         transform: rotateZ(180deg);
-      }
+    }
 }
-/* @-webkit-keyframes animateBtnMenu {
+@-webkit-keyframes animateBtnMenu {
     0% {
-        transform: rotateZ(0);
-      }
-      100% {
-        transform: rotateZ(180deg);
-      }
-} */
+        -webkit-transform: rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateZ(180deg);
+    }
+}
