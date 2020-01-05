@@ -30,7 +30,8 @@ let jsControl = [
 
 try {
     // Hàm sự kiên onclick của nút ẩn hiện menu
-   toggleMenu.onclick = () => {
+    toggleMenu.onclick = () => {
+        spinBtnMenu()
         if (showMenu) {
             // Hidden
             showMenu = false;
@@ -70,15 +71,7 @@ try {
             showSlide(el.content);
             offMenu();
             el.btn.classList.add('active');
-            toggleMenu.animate([
-                // keyframes
-                { transform: 'rotateZ(0deg)' }, 
-                { transform: 'rotateZ(180deg)' }
-              ], { 
-                // timing options
-                duration: 250,
-                iterations: 1
-            });
+            spinBtnMenu();
         };
     });
 } catch(e){}
@@ -111,7 +104,14 @@ function offMenu() {
     // hidden foot menu
     menuFoot.style.opacity = '0';
     // Xoay btn menu khi close menu
-    document.getElementById('btn-menu').checked = true;
     document.getElementById('icon-menu').className = 'icon-menu';
+}
 
+function spinBtnMenu() {
+    let stt = document.getElementById('js-toggle-menu').className;
+    if (stt === 'menu-item') {
+        document.getElementById('js-toggle-menu').classList.add('xoay');
+    } else {
+        document.getElementById('js-toggle-menu').classList.remove('xoay');
+    }
 }
