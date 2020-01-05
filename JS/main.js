@@ -58,7 +58,7 @@ try {
             // Chuyen thanh dau x
             setTimeout(() => {
                 document.getElementById('icon-menu').className = 'icon-cross';
-            }, 200);
+            }, 150);
         }
     } // end onclick
 } catch(e){}
@@ -70,6 +70,15 @@ try {
             showSlide(el.content);
             offMenu();
             el.btn.classList.add('active');
+            toggleMenu.animate([
+                // keyframes
+                { transform: 'rotateZ(180deg)' }, 
+                { transform: 'translateY(0px)' }
+              ], { 
+                // timing options
+                duration: 250,
+                iterations: 1
+              });
         };
     });
 } catch(e){}
