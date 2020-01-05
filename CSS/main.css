@@ -211,16 +211,16 @@ body {
 @keyframes animateBtnMenu {
     0% {
         transform: rotateZ(0);
-      }
-      100% {
+    }
+    100% {
         transform: rotateZ(180deg);
       }
 }
 @-webkit-keyframes animateBtnMenu {
     0% {
-        transform: rotateZ(0);
-      }
-      100% {
-        transform: rotateZ(180deg);
-      }
+        transform: -webkit-rotateZ(0);
+    }
+    100% {
+        transform: -webkit-rotateZ(180deg);
+    }
 }
