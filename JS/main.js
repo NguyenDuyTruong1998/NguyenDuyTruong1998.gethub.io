@@ -78,7 +78,7 @@ try {
                 // timing options
                 duration: 250,
                 iterations: 1
-              });
+            });
         };
     });
 } catch(e){}

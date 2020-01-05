@@ -95,9 +95,11 @@ body {
 
 #btn-menu:checked + #js-toggle-menu {
     transform: rotateZ(180deg);
+    -webkit-animation-name: animateBtnMenu;
+    -webkit-animation-duration: 0.25s;
+    animation-name: animateBtnMenu;
+    animation-duration: 0.25s;
 
-    animation: animateBtnMenu 0.25s;
-}
 }
 
 .menu-text {
