@@ -22,13 +22,20 @@
   .col-s-10 {width: 83.33%;}
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
-  html {font-size: 12px;}
+  html {
+    font-size: 12px;
+    min-height: 38rem;
+  }
   .wrapper {
     max-width: 85%;
   }
+  .content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 868px) {
   /* For desktop: */
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
@@ -42,9 +49,16 @@
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
-  html {font-size: 14px;}
+  html {
+    font-size: 14px;
+    min-height: 40rem;
+  }
   .wrapper {
     max-width: 70%;
+  }
+  .content {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 

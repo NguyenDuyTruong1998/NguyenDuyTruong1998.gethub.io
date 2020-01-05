@@ -1,10 +1,10 @@
 html,body {
     height: 100%;
-    min-height: 40rem;
+    min-height: 32rem;
 }
 
 body {
-    background-color: #328d8a;
+    background-color: #9ffbf8;
 }
 
 .wrapper {
@@ -15,12 +15,13 @@ body {
 
 .heading {
     font-size: 3.5rem;
-    font-weight: 400;
-    text-align: center;
+    font-weight: bold;
+    color: #4b635f;
 }
 
 .content {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
+    text-align: justify;
 }
 
 .menu-item {
@@ -30,6 +31,10 @@ body {
     font-weight: bold;
 }
 
+.text-light {
+    color: turquoise;
+}
+
 #js-header,
 #js-aboutme,
 #js-mywork,
@@ -37,10 +42,9 @@ body {
 #js-game,
 #js-contact {
     display: none;
-    height: 100%;
-    color: white;
-    background-color: #57c2bf;
-    padding: 4rem 0;
+    min-height: 100%;
+    color: #5e7c77;
+    background-color: #e9f0f2;
     position: absolute;
     padding-left: 6.5rem;
     padding-bottom: 3.5rem;
@@ -65,6 +69,7 @@ body {
     user-select: none;
     white-space: nowrap;
     transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
     box-shadow: 1px 4px 8px 5px rgba(1, 50, 73, 0.2);
 }
 .bg-image {
@@ -139,7 +144,7 @@ body {
 
 #js-aboutme {
     display: initial;
-    /* background-color: #607d8b; */
+    line-height: 2rem;
 }
 .img-avt {
     border-radius: 50%;
@@ -149,7 +154,10 @@ body {
     margin-right: auto;
     overflow: hidden;
 }
-
+.about__details {
+    font-weight: 400;
+    margin: 1rem 0;
+}
 
 #js-resume {
     /* background-color: #3f51db; */
@@ -187,6 +195,7 @@ body {
 .icon-cross::before {
     font-size: 3rem;
     color: tomato;
+    margin-left: 0.2rem;
 }
 
 .xoay {
