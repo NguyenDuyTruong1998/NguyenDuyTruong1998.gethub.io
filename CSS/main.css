@@ -70,6 +70,7 @@ body {
     white-space: nowrap;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
     box-shadow: 1px 4px 8px 5px rgba(1, 50, 73, 0.2);
 }
 .bg-image {
@@ -142,6 +143,7 @@ body {
 #js-mywork {
 }
 
+/* About me */
 #js-aboutme {
     display: initial;
     line-height: 2rem;
@@ -158,6 +160,19 @@ body {
     font-weight: 400;
     margin: 1rem 0;
 }
+.aboutme__projects {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+.projects-item a {
+    color: teal;
+    display: table;
+}
+.projects-item a:hover {
+    color: turquoise;
+}
+/* End aboutme */
+
 
 #js-resume {
     /* background-color: #3f51db; */
@@ -204,8 +219,8 @@ body {
     -moz-transform: rotateZ(180deg);
     -ms-transform: rotateZ(180deg);
     -o-transform: rotateZ(180deg);
-
 }
+
 
 /* Animate */
 @keyframes animateright {
