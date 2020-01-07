@@ -33,9 +33,6 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .mywork__projects .col-s-6 {
-    padding: .5rem;
-}
 }
 
 @media only screen and (min-width: 868px) {
