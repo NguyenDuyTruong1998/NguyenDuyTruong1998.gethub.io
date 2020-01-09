@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xep gach</title>
+  <link rel="stylesheet" href="xepgach.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body onkeypress="game.keyPress()">
+  <section id="main" class="block">
+    <div class="col-9 left">
+      <div id="js-boadrGame"></div> <!-- ban game -->
+      <p class="start" id="start">Press ANYKEY or START button to start.</p>
+    </div>
+
+    <div class="col-3 right">
+      <p>Scores:  <span id="scores">0</span></p>
+      <hr />
+      <small>Next brick</small>
+    	<div id="next-brick"></div>
+      <hr><br>
+      <!-- Controll -->
+      <div class="control">
+        <p>↑ = W: Change</p>
+        <p>← = A: Move left</p>
+        <p>→ = D: Move right</p>
+        <p>↓ = S: Speed up</p>
+        <br>
+        <button id="js-button-start" onclick="startGame()">Start</button>
+        <button onclick="game.moveUp()">↑</button>
+        <button onclick="game.moveLeft()">←</button></td>
+        <button onclick="game.moveRight()">→</button></td>
+        <button onclick="game.moveDown()">↓</button></td>
+      </div>
+    </div>
+  </section>
+  <script src="xepgach.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</body>
+</html>

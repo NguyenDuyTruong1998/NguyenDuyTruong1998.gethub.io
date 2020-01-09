@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {font-size: 62.5%}
+body, html {
+  height: 100%;
+}
+.icon-x {
+	background-color: #ffffff;
+}
+.icon-y {
+	background-color: #05132b;
+}
+body {
+  background-color: #080c14;
+  font-family: 'Times New Roman', Times, serif;
+}
+#js-boadrGame {
+  height: 100vmin;
+  background-color: #080c14;
+}
+table {
+  background-color: #333;
+  max-height: 100%;
+}
+#next-brick td {
+	width: 4.5vmin;
+	height: 4.5vmin;
+	background-color: #07232a;
+}
+#next-brick .icon-x {
+	background-color: #ffffff;
+}
+#next-brick table {
+  border: none;
+  background-color: #07232a;
+}
+section#main {
+  display: table;
+  margin: 0 auto;
+  position: relative;
+}
+
+[class*="col-"] {
+  float: left;
+}
+td{
+  width: 4.5vmin;
+  height: 4.5vmin;
+  background-color: #05132b;
+}
+.left {
+  height: 100%;
+  position: relative
+}
+.start {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  color: #fff;
+  font-size: 4vmin;
+  font-weight: bold;
+  text-align: center;
+  transition: all 1s ease;
+}
+.over {
+  color: red;
+  top: 40%;
+  opacity: 1;
+}
+.right {
+  max-width: 20vmin;
+  height: 95vmin;
+  color: white;
+  padding: 10px;
+  background-color: #07232a;
+  font-size: 2vmin;
+}
+.control button{
+  width: 100%;
+  margin: 1px 0;
+  height: 9vmin;
+  font-weight: bold;
+  font-size: 5vmin;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .right {
+    height: auto;
+  }
+
+}
