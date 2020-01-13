@@ -1,0 +1,98 @@
+    * {
+        margin            : 0;
+        padding           : 0;
+        box-sizing        : border-box;
+        -moz-box-sizing   : border-box;
+        -webkit-box-sizing: border-box;
+    }
+    body{
+        background-color: #160717;
+    }
+    section {
+        position     : relative;
+        display      : table;
+        margin       : 0 auto;
+        text-align   : center;
+        margin-top   : 20px;
+        margin-bottom: 50px;
+    }
+    fieldset {
+        background-color: white;
+        padding         : 10px;
+        margin          : 10px;
+    }
+    fieldset button {
+        width           : 37px;
+        height          : 37px;
+        position        : relative;
+        background-color: white;
+    }
+    table {
+        margin: 0 auto;
+    }
+    td {
+        padding: 0px;
+        width  : 37px;
+        height : 37px;
+    }
+    fieldset {
+        border-radius: 5px;
+    }
+    fieldset .icon {
+        font-size: 33px;
+        position : absolute;
+    }
+    fieldset .icon-x {
+        top  : 0px;
+        left : 0px;
+        color: orange;
+    }
+    fieldset .icon-circle-o {
+        color      : green;
+        top        : 0px;
+        left       : 2px;
+        font-weight: bold;
+    }
+    input[type=submit] {
+        background-color: #008CBA;
+        padding         : 12px 16px;
+        margin          : 10px;
+        border-radius   : 5px;
+        color           : white;
+    }
+    input[type=submit]:active {
+        background-color: #00CCBA;
+        box-shadow      : 0 5px #666;
+        transform       : translateY(4px);
+    }
+    h1, p {color: white;}
+    .active {
+        background-color: lightgray;
+    }
+    .actived {
+        background-color: gray;
+    }
+    fieldset:disabled {
+       background: lightgray;
+    }
+    .bangdiem {
+        width: 100px;
+        background-color: white;
+        position: absolute;
+        top: 100px;
+        left: -91px;
+        border: 1px solid orange;
+        border-radius: 7px;
+        font-size: 1.5em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .count-win {
+        color: #041838;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .count-win p {
+        font-size: 0.5em;
+        color: #631303;
+    }
