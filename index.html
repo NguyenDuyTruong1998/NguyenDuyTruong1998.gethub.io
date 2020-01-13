@@ -13,6 +13,9 @@
     <title>Truongezgg comming soon</title>
 </head>
 <body>
+    <div class="loader loader--hidden">
+        <img src="./images/loading.gif" alt="Loading...">
+    </div>
     <section class="wrapper row">
         <div class="col-s-12" id="js-header">
             <div class="bg-image"></div>
@@ -267,5 +270,11 @@
         <p>Coppyright © 2020 Powered by Nguyễn Duy Trường ver1.0</p>
     </footer>
     <script src="JS/main.js"></script>
+    <script>
+        window.onload = () => {
+            const loader = document.querySelector('.loader');
+            loader.className += ' hidden';
+        }
+    </script>
 </body >
 </html>
