@@ -35,6 +35,8 @@ body {
     color: turquoise;
 }
 
+/* Preload trang */
+
 .loader {
     position: fixed;
     z-index: 999;
@@ -49,13 +51,15 @@ body {
 }
 .loader--hidden {
     animation: fadeOut 1s;
+    -moz-animation: fadeOut 1s;
+    -webkit-animation: fadeOut 1s;
+    -ms-animation: fadeOut 1s;
+    -o-animation: fadeOut 1s;
     animation-fill-mode: forwards;
-}
-@keyframes fadeOut {
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
 }
 
 .loader > img {
@@ -231,6 +235,32 @@ body {
 .projects-item a:hover {
     color: turquoise;
 }
+.about__skill__container {
+    background-color: lightgray;
+    border-radius: 1rem;
+    overflow: hidden;
+    color: #fff;
+    text-align: right;
+}
+.about__skill__container > div {
+    background-color: #2196f3;
+    padding-right: 0.5rem;
+}
+.about__html__process {
+    width : 60%;
+}
+.about__css__process {
+    width : 50%;
+}
+.about__javascript__process {
+    width: 40%;
+}
+.about__php__process {
+    width: 30%;
+}
+.about__english__process {
+    width: 30%;
+}
 /* End aboutme */
 
 
@@ -310,6 +340,9 @@ body {
 #js-contact {
     /* background-color: #009688; */
 }
+.contact__body {
+    text-align: center;
+}
 
 .footer {
     background-color: white;
@@ -356,4 +389,17 @@ body {
 @-webkit-keyframes animateright {
     from {top: -1500px; opacity: 0.2;}
     to {top: 0; opacity: 1;}
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

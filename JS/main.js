@@ -1,7 +1,4 @@
 // Chữ của menu, nút & menu
-window.onload = () => {
-    spinBtnMenu();
-};
 let menuText = document.querySelectorAll('.menu-text'),
     toggleMenu = document.getElementById('js-toggle-menu'),
     menu = document.getElementById('js-header'),
