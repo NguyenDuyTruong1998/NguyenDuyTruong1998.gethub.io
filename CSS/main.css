@@ -21,7 +21,7 @@ body {
 
 .content {
     padding: 1rem 1.5rem;
-    text-align: justify;
+    text-align: ;
 }
 
 .menu-item {
@@ -50,11 +50,11 @@ body {
     background-color: white;
 }
 .loader--hidden {
-    animation: fadeOut 1s;
-    -moz-animation: fadeOut 1s;
-    -webkit-animation: fadeOut 1s;
-    -ms-animation: fadeOut 1s;
-    -o-animation: fadeOut 1s;
+    animation: fadeOut 0.5s;
+    -moz-animation: fadeOut 0.5s;
+    -webkit-animation: fadeOut 0.5s;
+    -ms-animation: fadeOut 0.5s;
+    -o-animation: fadeOut 0.5s;
     animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
@@ -106,7 +106,7 @@ body {
 }
 .bg-image {
     position: absolute;
-    top: -2.5rem;
+    top: -2rem;
     left: 0;
     width: 25rem;
     height: 100%;
@@ -211,6 +211,9 @@ body {
 #js-aboutme {
     display: initial;
     line-height: 2rem;
+}
+#js-aboutme .content {
+    text-align: justify;
 }
 .img-avt {
     border-radius: 50%;
@@ -341,13 +344,17 @@ body {
     /* background-color: #009688; */
 }
 .contact__body {
-    text-align: center;
+    padding-left: 5rem;
+    padding: 5rem 0 5rem 5rem;
+    line-height: 2rem;
 }
+
+
 
 .footer {
     background-color: white;
-    height: 2.5rem;
-    line-height: 2.5rem;
+    height: 2rem;
+    line-height: 2rem;
     padding: 0 2rem;
     position: fixed;
     bottom: 0;
