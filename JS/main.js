@@ -21,10 +21,6 @@ let jsControl = [
     {
         btn : document.getElementById('js-btn-contact'),
         content : document.getElementById('js-contact')
-    },
-    {
-        btn : document.getElementById('js-btn-game'),
-        content : document.getElementById('js-game')
     }
 ];
 
