@@ -70,7 +70,6 @@ body {
 #js-aboutme,
 #js-mywork,
 #js-resume,
-#js-game,
 #js-contact {
     display: none;
     height: 100%;
@@ -335,10 +334,6 @@ body {
 
 
 /* End resume */
-
-#js-game {
-    /* background-color: #616161; */
-}
 
 #js-contact {
     /* background-color: #009688; */
