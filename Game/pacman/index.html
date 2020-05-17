@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/setting.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- bản phát triển (development), bao gồm những cảnh báo hữu ích trong console -->
+    <script src="./JS/vue.js"></script>
+</head>
+<body>
+    
+    <section class="wraper" id="wraper">
+        <page-heading></page-heading>
+        <section class="game" id="game">
+            <div class="game-board">
+                <div class="headerBoard">1UP</div>
+                <div
+                    class="container"
+                    id="container"
+                    v-on:click="fullScreen"
+                    v-bind:style="{
+                        width: config.width  + 'px',
+                        height: config.height  + 'px'
+                    }"
+                >
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+        </section>
+        <page-footer></page-footer>
+    </section>
+    <script src="./JS/components.js"></script>
+    <script src="./JS/main.js"></script>
+    <!-- <script>
+        document.querySelector("#game").addEventListener('click', async () => {
+            await document.querySelector("#game").requestFullscreen();
+        })
+    </script> -->
+</body>
+</html>
