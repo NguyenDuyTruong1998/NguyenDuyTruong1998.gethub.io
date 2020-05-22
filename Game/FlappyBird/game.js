@@ -8,6 +8,21 @@ let frames = 0;
 // Load sprite image
 const sprite = new Image();
 sprite.src = './img/sprite.png';
+
+const SCORE_S = new Audio();
+SCORE_S.src = 'audio/sfx_point.wav'
+
+const FLAP = new Audio();
+FLAP.src = 'audio/sfx_flap.wav'
+
+const HIT = new Audio();
+HIT.src = 'audio/sfx_hit.wav'
+
+const SWOOSHING = new Audio();
+SWOOSHING.src = 'audio/sfx_swooshing.wav'
+
+const DIE = new Audio();
+DIE.src = 'audio/sfx_die.wav'
 // Game state
 const state = {
     current: 0,
@@ -15,18 +30,33 @@ const state = {
     game: 1,
     over: 2
 }
+const startBtn = {
+    x: 120,
+    y: 263,
+    w: 83,
+    h: 29
+}
 // Control the game
 cvs.addEventListener('click', async function(evt) {
-    // await cvs.requestFullscreen();
     switch(state.current) {
         case state.gameReady:
+        SWOOSHING.play();
             state.current = state.game;
             break;
         case state.game:
             bird.flap();
+            FLAP.play();
             break;
         case state.over:
-            state.current = state.gameReady;
+            let rect = cvs.getBoundingClientRect();
+            let clickX = evt.clientX - rect.left;
+            let clickY = evt.clientY - rect.top;
+            if (clickX >= startBtn.x && clickX <= startBtn.x + startBtn.w && clickY >= startBtn.y && clickY <= startBtn.y + startBtn.h) {
+                pipes.reset();
+                bird.speedReset();
+                score.reset();
+                state.current = state.gameReady;
+            }
             break;
     }
 })
@@ -58,6 +88,33 @@ const bg = {
         if (state.current == state.game) {
             this.x = (this.x - this.dx) % (this.w);
         }
+    }
+}
+
+const score = {
+    best: Number(localStorage.getItem("best")) | 0,
+    value: 0,
+    draw: function() {
+        ctx.fillStyle = "#fff";
+        ctx.strokeStyle = "#000"
+        if (state.current == state.game) {
+            ctx.lineWidth = 2;
+            ctx.font = "35px Teko";
+            ctx.fillText(this.value, cvs.width/2, 50)
+            ctx.strokeText(this.value, cvs.width/2, 50)
+        } else if(state.current == state.over){
+            
+            ctx.font = "25px Teko";
+            // score
+            ctx.fillText(this.value, 255, 186)
+            ctx.strokeText(this.value, 225, 186)
+            // Best
+            ctx.fillText(this.best, 225, 228)
+            ctx.strokeText(this.best, 225, 228)
+        }
+    },
+    reset: function() {
+        this.value = 0;
     }
 }
 // Fore ground
@@ -123,6 +180,7 @@ const bird = {
     jump: 4.6,
     speed: 0,
     rotation: 0,
+    radius: 12,
     draw: function() {
         let bird = this.animation[this.frame];
         ctx.save();
@@ -153,8 +211,11 @@ const bird = {
             this.y += this.speed;
             if (this.y + this.h/2 >= cvs.height - fg.h) {
                 this.y = cvs.height - fg.h - this.h/2
-                if (state.current == state.game)
+                if (state.current == state.game) {
                     state.current = state.over
+                    DIE.play();
+                }
+
             }
             if (this.speed >= this.jump) {
                 this.rotation = 60 * DEGREE
@@ -162,6 +223,9 @@ const bird = {
                 this.rotation = -25 * DEGREE
             }
         }
+    },
+    speedReset: function() {
+        this.speed = 0;
     }
 }
 
@@ -186,6 +250,93 @@ const getReady = {
                 this.h   // Destinition height
             );
         }
+    }
+}
+
+const pipes = {
+    position: [],
+    top: {
+        sX: 553,
+        sY: 0
+    },
+    bottom: {
+        sX: 502,
+        sY: 0
+    },
+    w: 53,
+    h: 400,
+    grap: 85,
+    maxYpos: -150,
+    dx: 2,
+    draw: function() {
+        for (let i = 0; i< this.position.length; i++) {
+            let p = this.position[i];
+
+            let topYPos = p.y;
+            let bottomYPos = p.y + this.h + this.grap;
+            // Top pipe
+            ctx.drawImage(
+                sprite,
+                this.top.sX,
+                this.top.sY,
+                this.w,
+                this.h,
+                p.x,
+                topYPos,
+                this.w,
+                this.h
+            )
+            // Bottom pipe
+            ctx.drawImage(
+                sprite,
+                this.bottom.sX,
+                this.bottom.sY,
+                this.w,
+                this.h,
+                p.x,
+                bottomYPos,
+                this.w,
+                this.h
+            )
+        }
+    },
+    update: function() {
+        if (state.current !== state.game) return;
+        if (frames % 100 === 0) {
+            this.position.push({
+                x: cvs.width,
+                y: this.maxYpos * (Math.random() + 1)
+            })
+        }
+        for(let i = 0; i < this.position.length; i++) {
+            let p = this.position[i]
+            
+            let bottomYPos = p.y + this.grap + this.h
+            // Top pipe
+            if (bird.x + bird.radius > p.x && bird.x - bird.radius < p.x + this.w &&
+                bird.y + bird.radius > p.y && bird.y - bird.radius < p.y + this.h) {
+                state.current = state.over
+                HIT.play()
+            }
+            // Bottom pipe
+            if (bird.x + bird.radius > p.x && bird.x - bird.radius < p.x + this.w &&
+                bird.y + bird.radius > bottomYPos && bird.y - bird.radius < bottomYPos + this.h) {
+                state.current = state.over
+                HIT.play()
+            }
+            // Move pipe to the left
+            p.x -= this.dx;
+            if (p.x + this.w <= 0) {
+                this.position.shift();
+                score.value += 1;
+                SCORE_S.play()
+                score.best = Math.max(score.value, score.best);
+                localStorage.setItem("best", score.best);
+            }
+        }
+    },
+    reset: function() {
+        this.position = [];
     }
 }
 
@@ -217,16 +368,19 @@ function draw() {
     ctx.fillRect(0, 0, cvs.clientWidth, cvs.height );
     
     bg.draw();
+    pipes.draw();
     fg.draw();
     bird.draw();
     getReady.draw();
     gameOver.draw();
-    fg.update();
-    bg.update();
+    score.draw();
 }
 
 function update() {
     bird.update();
+    fg.update();
+    bg.update();
+    pipes.update();
 }
 
 function loop() {

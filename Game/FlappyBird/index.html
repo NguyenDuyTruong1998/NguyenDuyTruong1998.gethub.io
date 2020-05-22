@@ -11,10 +11,14 @@
             display: block;
             margin: 0 auto;
         }
+        h1 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <canvas id="mycanvas" width="320" height="480"></canvas>
+    <h1 onclick="document.getElementById('mycanvas').requestFullscreen();">Fullscreen</h1>
     <script src="game.js"></script>
 </body>
 </html>
